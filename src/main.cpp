@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
 	// Imprimindo o resultado final
 	print_result();
 
-	cout << "\nTempo de execução (ACO): "
+	cout << "\nTime  (ACO): "
 			<< calculate_time(time_start, clock()) << " ms" << endl;
 	// cin.get(); // aguarda por um novo caracter para então encerrar a aplicação
 	return 0;
@@ -303,7 +303,7 @@ double calculate_time(clock_t start, clock_t end) {
 }
 
 void print_route(int ant_index, int route[CITY_AMOUNT], double distance) {
-	string temp = "Rota da formiga " + number_to_String(ant_index) + " : ";
+	string temp = "ant_index " + number_to_String(ant_index) + " : ";
 	for (unsigned int i = 0; i < CITY_AMOUNT; i++) {
 		temp += number_to_String(route[i]);
 		if ((i + 1) != CITY_AMOUNT) {
@@ -345,9 +345,9 @@ void print_result() {
 	print_route(0, best_route, best_distance);
 
 	calculate_metrics();
-	cout << "Média:" << average << endl;
-	cout << "Variância:" << variance << endl;
-	cout << "Desvio padrão:" << standard_deviation << endl;
+	cout << "average:" << average << endl;
+	cout << "variance:" << variance << endl;
+	cout << "standard_deviation:" << standard_deviation << endl;
 }
 
 string number_to_String(double n) {
