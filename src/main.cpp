@@ -89,7 +89,7 @@ void calculate_metrics();
 
 int main(int argc, char *argv[])
  {
- 	cout << "Hello world!" << endl;
+ 	//cout << "Hello world!" << endl;
 	clock_t time_start = clock();
 	// Inicializando o gerador de números randômicos com um seed temporal
 	srand(time(0));
