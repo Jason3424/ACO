@@ -89,7 +89,6 @@ void calculate_metrics();
 
 int main(int argc, char *argv[])
  {
- 	cout << "Hello world!" << endl;
 	clock_t time_start = clock();
 	// Inicializando o gerador de números randômicos com um seed temporal
 	srand(time(0));
@@ -119,11 +118,12 @@ int main(int argc, char *argv[])
 
 	cout << "\nTempo de execução (ACO): "
 			<< calculate_time(time_start, clock()) << " ms" << endl;
-	//cin.get(); // aguarda por um novo caracter para então encerrar a aplicação
+	// cin.get(); // aguarda por um novo caracter para então encerrar a aplicação
 	return 0;
 }
 
-void init_ant(int index) {
+void init_ant(int index) 
+{
 	ants[index].distance = 0;
 	ants[index].fitness = 0;
 	ants[index].position = 0;
@@ -135,7 +135,8 @@ void init_ant(int index) {
 	ants[index].route[0] = random_city;
 }
 
-void seed_initial_pheromone(bool random) {
+void seed_initial_pheromone(bool random) 
+{
 	for (int i = 0; i < CITY_AMOUNT; i++) {
 		for (int j = 0; j < CITY_AMOUNT; j++) {
 			if (i != j) {
